@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contests Rating</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body style="background-color: rgb(4, 32, 41); color: aliceblue;">
+    <h1 class="flex justify-center items-center mt-10 text-4xl font-bold">Contests Visualizer</h1>
+
+    <div class="flex justify-center items-center mt-10">
+      <button id="rankBtn" class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-l mx-5">
+       Rank <span class="text-xl font-bold">↓</span>
+      </button>
+      <button id="solveBtn" class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-l mx-5">
+       Solve <span class="text-xl font-bold">↑</span >
+      </button>
+      <button id="ratingBtn" class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-l mx-5">
+      Rating <span class="text-xl font-bold">↑</span>
+      </button>
+      
+    </div>
+    <div id="app" class="flex mt-10">
+      <table class="table-fixed border-spacing-2 border border-slate-500 m-auto">
+        <thead>
+          <tr>
+            <th class="border border-slate-600">#</th>
+            <th class="border border-slate-600">Contest</th>
+            <th class="border border-slate-600">Rank</th>
+            <th class="border border-slate-600">Solve</th>
+            <th class="border border-slate-600">Rating</th>
+          </tr>
+        </thead>
+        <tbody id="table-body">
+          <tr>
+            <td class="border border-slate-600 px-4 py-2">1</td>
+            <td class="border border-slate-600 px-4 py-2">Codeforces Round 898 (Div. 4)</td>
+            <td class="border border-slate-600 px-4 py-2">506</td>
+            <td class="border border-slate-600 px-4 py-2">5</td>
+            <td class="border border-slate-600 px-4 py-2">1181</td>
+          </tr>
+          <tr>
+            <td class="border border-slate-600 px-4 py-2">2</td>
+            <td class="border border-slate-600 px-4 py-2">Codeforces Round 898 (Div. 2)</td>
+            <td class="border border-slate-600 px-4 py-2">3500</td>
+            <td class="border border-slate-600 px-4 py-2">2</td>
+            <td class="border border-slate-600 px-4 py-2">1302</td>
+          </tr>
+          <tr>
+            <td class="border border-slate-600 px-4 py-2">3</td>
+            <td class="border border-slate-600 px-4 py-2">Codeforces Round 898 (Div. 3)</td>
+            <td class="border border-slate-600 px-4 py-2">2500</td>
+            <td class="border border-slate-600 px-4 py-2">4</td>
+            <td class="border border-slate-600 px-4 py-2">1234</td>
+          </tr>
+          <tr>
+            <td class="border border-slate-600 px-4 py-2">4</td>
+            <td class="border border-slate-600 px-4 py-2">Codeforces Round 898 (Div. 2)</td>
+            <td class="border border-slate-600 px-4 py-2">2101</td>
+            <td class="border border-slate-600 px-4 py-2">4</td>
+            <td class="border border-slate-600 px-4 py-2">1021</td>
+          </tr>
+          <tr>
+            <td class="border border-slate-600 px-4 py-2">5</td>
+            <td class="border border-slate-600 px-4 py-2">Codeforces Round 898 (Div. 2)</td>
+            <td class="border border-slate-600 px-4 py-2">3166</td>
+            <td class="border border-slate-600 px-4 py-2">2</td>
+            <td class="border border-slate-600 px-4 py-2">1302</td>
+          </tr>
+          <tr>
+            <td class="border border-slate-600 px-4 py-2">6</td>
+            <td class="border border-slate-600 px-4 py-2">Codeforces Round 898 (Div. 1)</td>
+            <td class="border border-slate-600 px-4 py-2">2172</td>
+            <td class="border border-slate-600 px-4 py-2">3</td>
+            <td class="border border-slate-600 px-4 py-2">1240</td>
+          </tr>
+          <tr>
+            <td class="border border-slate-600 px-4 py-2">6</td>
+            <td class="border border-slate-600 px-4 py-2">Codeforces Round 898 (Div. 4)</td>
+            <td class="border border-slate-600 px-4 py-2">2350</td>
+            <td class="border border-slate-600 px-4 py-2">7</td>
+            <td class="border border-slate-600 px-4 py-2">1440</td>
+          </tr>
+          <tr>
+            <td class="border border-slate-600 px-4 py-2">7</td>
+            <td class="border border-slate-600 px-4 py-2">Codeforces Round 898 (Div. 2)</td>
+            <td class="border border-slate-600 px-4 py-2">1000</td>
+            <td class="border border-slate-600 px-4 py-2">3</td>
+            <td class="border border-slate-600 px-4 py-2">1240</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <table class="table-fixed border-spacing-2 border border-slate-500 m-auto ">
+        <thead>
+          <tr>
+            <th class="border border-slate-600">#</th>
+            <th class="border border-slate-600">Contest</th>
+            <th class="border border-slate-600">Rank</th>
+            <th class="border border-slate-600">Solve</th>
+            <th class="border border-slate-600">Rating</th>
+          </tr>
+        </thead>
+        <tbody id="dymanic-table-body">
+       <!-- //// here come dymanic data  -->
+        </tbody>
+      </table>
+
+      
+
+    </div>
+     
+    <div  class="bar my-4">
+      <h1 class="flex justify-center items-center mt-10 text-4xl font-bold ">visualize data with a bar chart</h1>
+
+      <div class="flex justify-center items-center mt-10">
+        <button id="bar_rankBtn" class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-l mx-5">
+         Rank 
+        </button>
+        <button id="bar_solveBtn" class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-l mx-5">
+         Solve 
+        </button>
+        <button id="bar_ratingBtn" class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-l mx-5">
+        Rating 
+        </button>
+        
+      </div>
+    </div>
+    <canvas id="myChart" style="width:70%;max-width:70%;max-height:500px;"></canvas>
+    
+  
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
